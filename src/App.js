@@ -31,8 +31,11 @@ function App() {
     if (mode.length === 0) {
       axios.get(BASE_URL,
           {headers: {
-              "access-control-allow-origin": "*",
-              "Content-type": "application/json; charset=UTF-8"
+              "Access-Control-Allow-Origin": "*",
+              "Access-Control-Allow-Methods": "POST, GET, OPTIONS, PUT, DELETE",
+              "Access-Control-Allow-Headers": "Content-Type, X-Auth-Token, Origin, Authorization",
+              "Access-Control-Allow-Credentials": "true",
+              "Content-type": "application/json; charset=UTF-8",
             }}
           )
         .then((response) => {
@@ -64,7 +67,6 @@ function App() {
     setActiveMode(newMode)
   }
 
-  // console.log(activeItems, itemEls)
   const saveActiveItems = () => {
     setActiveItems(itemEls.current.filter(el => el.classList.contains('active')))
   }
@@ -76,7 +78,6 @@ function App() {
     if (itemEls.current.length < Math.pow(activeMode.field, 2)) {
       itemEls.current.push(el)
     }
-    console.log(activeMode.field, itemEls.current)
   }
 
 
