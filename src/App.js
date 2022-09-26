@@ -14,17 +14,9 @@ function App() {
 
   const data = [
     {
-      name: 'Easy',
-      field: 5
-    },
-    {
-      name: 'Normal',
-      field: 15
-    },
-    {
-      name: 'Hard',
-      field: 25
-    },
+      name: 'Need to fix CORS Access',
+      field: 8
+    }
   ]
 
   useEffect(() => {
