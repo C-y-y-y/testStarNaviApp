@@ -5,7 +5,7 @@ import isObjEmpty from "./libs/isObjEmpty";
 import './style/App.scss';
 
 function App() {
-  const BASE_URL = 'http://demo7919674.mockable.io/';
+  const BASE_URL = 'https://demo7919674.mockable.io';
   const [mode, setMode] = useState([]);
   const [activeMode, setActiveMode] = useState({});
   const [datalist, setDatalist] = useState(false);
