@@ -12,33 +12,33 @@ function App() {
   const [start, setStart] = useState(false);
   const [error, setError] = useState(false)
 
-  const data = [
-    {
-      name: 'Easy',
-      field: 5
-    },
-    {
-      name: 'Normal',
-      field: 15
-    },
-    {
-      name: 'Hard',
-      field: 25
-    },
-  ]
-  useEffect(() => {
-    if (mode.length === 0) {
-      setMode(data)
-    }
-  })
-
+  // const data = [
+  //   {
+  //     name: 'Easy',
+  //     field: 5
+  //   },
+  //   {
+  //     name: 'Normal',
+  //     field: 15
+  //   },
+  //   {
+  //     name: 'Hard',
+  //     field: 25
+  //   },
+  // ]
   // useEffect(() => {
   //   if (mode.length === 0) {
-  //     axios.get(BASE_URL).then((response) => {
-  //       setMode(response.data);
-  //     });
+  //     setMode(data)
   //   }
-  // });
+  // })
+
+  useEffect(() => {
+    if (mode.length === 0) {
+      axios.get(BASE_URL).then((response) => {
+        setMode(response.data);
+      });
+    }
+  });
 
 
 
